@@ -25,9 +25,9 @@ const GoogleLogin = () => {
     }, []);
 
     const googleLoginHandler = (code) => {
-        console.log(`${BACKEND_API_URL}/auth/google/v1/login/${code}`);
+        console.log(`${BACKEND_API_URL}/auth/google/v1/login${code}`);
         return axios
-            .get(`${BACKEND_API_URL}/auth/google/v1/login/${code}`)
+            .get(`${BACKEND_API_URL}/auth/google/v1/login${code}`)
             .then((res) => {
                 console.log("response", res);
                 const tokens = {
