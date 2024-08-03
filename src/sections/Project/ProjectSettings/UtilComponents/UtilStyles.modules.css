@@ -1,0 +1,58 @@
+.generalDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.generalDiv>div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 10px 0px;
+    padding: 0px 20px;
+    width: 100%;
+}
+
+.generalDiv>div label{
+    font-size: 0.8rem;
+    margin: 2px 0px;
+}
+
+
+.generalDiv>div input,
+.generalDiv>div textarea{
+    border: #404040 2px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.generalDiv>div input:focus, .generalDiv>div textarea:focus{
+    outline: none;
+}
+
+.generalDiv>div .disabled{
+    background-color: #eaeaea;
+    font-family: "Roboto Mono", monospace;
+    border: 1px solid #eaeaea;
+    cursor: pointer; /* Change the cursor to pointer to indicate it's interactive */
+    outline: none; /* Optional: Remove outline on focus */
+}
+
+.generalDiv .disabled:hover {
+    border: 1px solid #ccc; /* Optional: Add a border or other hover effect */
+}
+
+.generalDiv>div textarea{
+    resize: none;
+}
+
+.dangerAlert{
+    border: #c10000 2px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #c10000;
+}

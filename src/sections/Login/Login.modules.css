@@ -1,0 +1,148 @@
+.loginDiv{
+    text-align: center;
+}
+
+.optionSpan {
+    font-size: 1.5rem;
+    color: black;
+    /*margin: 10px;*/
+    cursor: pointer; /* Add cursor pointer for clickable effect */
+}
+
+.underline {
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease-in-out; /* Faster transition */
+    margin-top: 5px;
+}
+
+.underline-active {
+    width: 10vw;
+}
+
+.underline-inactive {
+    width: 0;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+    width: 60vw;
+    opacity: 1; /* Ensure form starts visible */
+    transition: opacity 0.5s ease-in-out; /* Opacity transition for fade-in/out effect */
+}
+
+.col img {
+    width: 25px;
+    height: 25px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    margin: auto;
+    width: 80%;
+    /*max-width: 30vw;*/
+    height: 6vh;
+    border: none;
+    border-radius: 10px;
+    background-color: #e3e3e3;
+}
+
+.input .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input img {
+    margin: 0px 30px;
+}
+
+.input textarea,
+.input input {
+    color: black;
+    background-color: #e3e3e3;
+    border: none;
+    outline: none;
+    height: 60%;
+    resize: none;
+}
+
+.input textarea::placeholder,
+.input input::placeholder {
+    color: gray;
+    font-size: 1rem;
+}
+
+.submit {
+    background-color: black;
+    width: 150px;
+    height: 60px;
+    border-radius: 20px;
+    color: white;
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.submit:hover {
+    transform: scale(1.05);
+}
+
+.gray {
+    background-color: #e3e3e3;
+    border: black 1px solid;
+    color: black;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+
+/* Default: 4 columns */
+@media (min-width: 1300px) {
+    .input-container form {
+        max-width: 40vw;
+    }
+}
+
+/* 3 columns for medium screens */
+@media (max-width: 1299px) and (min-width: 900px) {
+    .input-container form {
+        max-width: 50vw;
+    }
+}
+
+/* 2 columns for smaller screens */
+@media (max-width: 899px) and (min-width: 600px) {
+
+}
+
+/* 1 column for very small screens */
+@media (max-width: 599px) {
+
+}

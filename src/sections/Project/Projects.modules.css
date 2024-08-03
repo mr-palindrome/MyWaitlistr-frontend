@@ -1,0 +1,154 @@
+.listDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.innerListDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectList {
+    display: grid;
+    gap: 10px 10px;
+    list-style-type: none;
+    padding: 40px 20px;
+}
+
+.projectList li {
+    margin: 20px 10px;
+    box-sizing: border-box;
+}
+
+/* Default: 4 columns */
+@media (min-width: 1300px) {
+    .projectList {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* 3 columns for medium screens */
+@media (max-width: 1299px) and (min-width: 900px) {
+    .projectList {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* 2 columns for smaller screens */
+@media (max-width: 899px) and (min-width: 600px) {
+    .projectList {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 1 column for very small screens */
+@media (max-width: 599px) {
+    .projectList {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.projectList li div{
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: #ffffff;
+}
+
+.card {
+    min-width: 13rem;
+    min-height: 12rem;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    /*align-items:center;*/
+    /*justify-items: center;*/
+    border: 10px solid #ffffff;
+    border-radius: 10px;
+    padding: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.5s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px 10px rgb(227, 227, 227);
+}
+
+.card .container{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.card .container a{
+    text-decoration: none;
+    color: gray;
+
+}
+
+.card-body {
+    /*flex: 1; !* Take remaining space in the card *!*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+.card-text {
+    /*margin-top: 10px;*/
+    font-size: 0.9rem;
+    font-weight: 400;
+    max-height: 8rem;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    /*white-space: nowrap;*/
+}
+
+.modal form .input{
+    width: 80%;
+}
+
+.modal form .descInput{
+    width: 80%;
+    height: 6rem;
+}
+/*.modal form .descInput input{*/
+/*    height: 80%;*/
+/*}*/
+
+.createButton{
+    color: black;
+    border: black solid 1px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.6s;
+}
+
+.utilitButton{
+    color: black;
+    border: black solid 1px;
+    padding: 1px 6px;
+    border-radius: 7px;
+    transition: 0.6s;
+    font-size: 0.8rem;
+    font-weight: 500;
+    height: 35px;
+}
+
+.createButton:hover,
+.utilitButton:hover{
+    color: white;
+    background-color: black;
+}
